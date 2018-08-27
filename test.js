@@ -1,0 +1,12 @@
+const assert = require('assert')
+const base64Length = require('./')
+
+assert.strictEqual(base64Length(''), 0)
+assert.strictEqual(base64Length('aA=='), 1)
+assert.strictEqual(base64Length('bLE='), 2)
+assert.strictEqual(base64Length('WSyq'), 3)
+assert.strictEqual(base64Length('TusH2Q=='), 4)
+assert.strictEqual(base64Length('MViNEU4='), 5)
+assert.strictEqual(base64Length('0y3UuBMSc26VTuhf9g/tnYCW3Z8='), 20)
+assert.strictEqual(base64Length('njqp7i70FcEETp9Ta/oC2dXebXyH'), 21)
+assert.strictEqual(base64Length('KwZA+eR5264YWpv+xujQ9PgLnSqCWw=='), 22)
