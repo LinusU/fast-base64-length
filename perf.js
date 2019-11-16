@@ -25,7 +25,7 @@ const bas64Length = require('./')
   const encoded = data.toString('base64')
   const iterations = 10 * 1024 * 1024
 
-  console.time(`compute 32B x10M`)
+  console.time('compute 32B x10M')
   for (let i = 0; i < iterations; i++) bas64Length(encoded)
-  console.timeEnd(`compute 32B x10M`)
+  console.timeEnd('compute 32B x10M')
 }
